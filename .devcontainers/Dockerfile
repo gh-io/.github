@@ -14,3 +14,10 @@ RUN pip3 install --no-cache-dir -r /tmp/pip-tmp/requirements.txt \
 
 COPY pull_kubu.sh /usr/local/bin/pull_kubu.sh
 RUN chmod +x /usr/local/bin/pull_kubu.sh
+
+# At the end of .devcontainer/Dockerfile
+RUN apt-get update && apt-get install -y docker.io \
+    && rm -rf /var/lib/apt/lists/*
+
+# Pull KUBU image during build
+RUN docker pull ghcr.io/web4application/kubu:main
