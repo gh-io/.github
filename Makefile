@@ -1,6 +1,18 @@
 TEST_API_VERSION ?= 1.45
 TEST_ENGINE_VERSION ?= 26.3
 
+BuildRequires: cmake
+
+build:
+.cmake:
+.cmake_build:
+
+.install:
+.cmake_install:
+
+.check:
+.ctest:
+
 ifeq ($(OS),Windows_NT)
     PLATFORM := Windows
 else
