@@ -31,3 +31,15 @@ services:
 
 volumes:
   postgres-data: null
+
+app:
+  build:
+    context: ..
+    dockerfile: .devcontainer/Dockerfile
+    args:
+      VARIANT: "3"
+      NODE_VERSION: "none"
+  volumes:
+    - ..:/workspace:cached
+  command: ["/bin/bash", "/workspace/entrypoint.sh", "sleep", "infinity"]
+  network_mode: service:db
