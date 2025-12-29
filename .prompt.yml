@@ -1,6 +1,6 @@
 name: KUBU Self-Updating Docker Agent
 description: Continuously ensures the KUBU container is running, updated, and reproducible using SHA digests.
-model: openai/gpt-4o-mini
+model: openai/gpt-5
 modelParameters:
   temperature: 0.2
 messages:
