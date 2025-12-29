@@ -1,0 +1,87 @@
+# Configure Sequencing (/en/docs/syndicate-stack/guides/config-sequencing)
+
+## How Onchain Sequencing Works
+
+1. **Users submit transactions** to the appchain's mempool
+2. **The execution engine** processes transactions by validating and coordination transactions
+3. **Sequencing modules on the sequencing chain** control permissions, ordering, auctions, and atomic execution
+4. **The settlement layer** finalizes state with periodic commitments
+
+This architecture decouples execution from transaction ordering, enabling innovation in sequencing while maintaining compatibility with existing execution environments.
+
+## Select Existing Modules
+
+Choose from our production-ready modules:
+
+| Category   | Module               | Description                               | Best For                                       |
+| ---------- | -------------------- | ----------------------------------------- | ---------------------------------------------- |
+| Permission | **Allowlist**        | Admin-controlled access list              | Testing, private networks, controlled rollouts |
+| Permission | **Token Balance**    | Permission based on token holdings        | Token-gated sequencing, economic security      |
+| Permission | **Always Allowed**   | Open access for testing                   | Development and testing                        |
+| Auction    | **Sealed Bid**       | Competitive bidding for sequencing rights | Market-based sequencer selection               |
+| Atomic     | **Atomic Sequencer** | Cross-chain transaction coordination      | Complex multi-chain operations                 |
+
+## Build Custom Modules
+
+Here are modules you can build using our interfaces:
+
+| Category   | Module            | Description                            | Best For                   |
+| ---------- | ----------------- | -------------------------------------- | -------------------------- |
+| Permission | **DAO Voting**    | Community-governed sequencer selection | Decentralized governance   |
+| Permission | **Multi-Sig**     | Multiple approval requirements         | High-security applications |
+| Permission | **Reputation**    | Permission based on past performance   | Quality-focused networks   |
+| Permission | **Time-Lock**     | Scheduled sequencing rights            | Predictable rotation       |
+| Ordering   | **Fee Priority**  | Order by gas price                     | Revenue optimization       |
+| Ordering   | **Random**        | Randomized transaction ordering        | MEV protection             |
+| Ordering   | **Batch Auction** | Time-window based ordering             | Fair price discovery       |
+| Ordering   | **Dynamic Size**  | Adaptive batch sizing                  | Network optimization       |
+| Auction    | **Dutch**         | Decreasing price auctions              | Quick price discovery      |
+| Auction    | **English**       | Increasing price auctions              | Maximum value extraction   |
+| Auction    | **Continuous**    | Rolling auction periods                | Constant availability      |
+
+## Compose Modules
+
+Combine modules to create sophisticated sequencing solutions using our factory contract:
+
+```solidity
+// Deploy the factory
+SyndicateFactory factory = new SyndicateFactory();
+
+// Create a RequireAll module for combining multiple checks
+RequireAllModule permissions = RequireAllModule(
+    factory.createAllContractsWithRequireAllModule(
+        admin,
+        manager,
+        l3ChainId,
+        salt
+    ).permissionModule
+);
+
+// Add permission checks
+permissions.addCheck(
+    address(new TokenBalanceSequencingModule(token, minBalance)),
+    true // add to head of list
+);
+permissions.addCheck(
+    address(new AllowlistSequencingModule(admin)),
+    false // add to tail of list
+);
+```
+
+#### Composition Features
+
+* **RequireAll**: All checks must pass (AND logic)
+* **RequireAny**: At least one check must pass (OR logic)
+* **Linked List Structure**: Checks are stored in an ordered list
+* **Dynamic Updates**: Add or remove checks at runtime
+* **Admin Control**: Only admin can modify composition
+
+## Getting Started
+
+1. **Choose Your Modules**: Review the available modules and select those that match your security, fairness, and performance requirements. If needed, plan custom modules to meet specific needs.
+
+2. **Implement Custom Logic**: Build new modules by implementing our interfaces and test them thoroughly using our development tools.
+
+3. **Configure Your Chain**: Deploy and initialize your chain with the selected modules.
+
+4. **Monitor and Upgrade**: Track performance metrics and upgrade modules as needed using our modular architecture to ensure optimal chain operation.
