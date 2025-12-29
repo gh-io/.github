@@ -3,7 +3,7 @@ tittle: doc
 layouts: block
 description: 
 ---
-
+ 
 1:1 relationship from `lib/<module>.js` to `doc/api/<module>.md`.
 
 Each type of heading has a description block.
