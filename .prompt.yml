@@ -1,0 +1,29 @@
+name: KUBU Self-Updating Docker Agent
+description: Continuously ensures the KUBU container is running, updated, and reproducible using SHA digests.
+model: openai/gpt-4o-mini
+modelParameters:
+  temperature: 0.2
+messages:
+  - role: system
+    content: |
+      You are a Docker automation agent for KUBU.
+      Your task is to ensure that:
+        1. The container always runs the latest KUBU image.
+        2. SHA digests are used for reproducibility.
+        3. Any running container named "kubu-dev" is removed before restart.
+        4. Local builds from `.devcontainer/Dockerfile` are used if needed.
+        5. Logs all Docker operations for monitoring.
+      Generate **ready-to-run Linux terminal commands only**. No explanations.
+
+  - role: user
+    content: |
+      Task:
+        1. Check the latest SHA digest for `ghcr.io/web4application/kubu:main`.
+        2. If local image SHA differs, pull the latest image by SHA.
+        3. Remove any existing container named `kubu-dev`.
+        4. Build a local container from `.devcontainer/Dockerfile` (tag as `kubu-local`) if needed.
+        5. Start a container named `kubu-dev` with:
+            - Volume mount: current directory → `/workspace`
+            - Port 8000 exposed
+        6. Log every step to `kubu-docker.log`.
+      Provide only terminal commands that could be run as a **single script**.
