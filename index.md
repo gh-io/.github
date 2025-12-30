@@ -1,6 +1,6 @@
 ---
-tittle: doc
-layouts: block
+tittle: gh.io
+layouts: page
 description: 
 ---
  
