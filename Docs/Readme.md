@@ -1,5 +1,6 @@
 # Getting Started
 
+
 Electron Forge is an all-in-one tool for packaging and distributing Electron applications. It combines many single-purpose packages to create a full build pipeline that works out of the box, complete with code signing, installers, and artifact publishing. For advanced workflows, custom build logic can be added in the Forge lifecycle through its [Plugin API](https://www.electronforge.io/config/plugins). Custom build and storage targets can be handled by creating your own [Makers](https://www.electronforge.io/config/makers) and [Publishers](https://www.electronforge.io/config/publishers).
 
 ## Prerequisites
