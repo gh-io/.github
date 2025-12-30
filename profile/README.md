@@ -1,4 +1,14 @@
-# 🌟 GH-IO Organization
+---
+tittle: GH organisation
+name: README.me
+name: gh.io
+contents: # 🌟 GH-IO Organization
+Description: 
+--- 
+
+
+
+
 
 Welcome to **GH-IO** — where innovation meets code.  
 We specialize in **AI, blockchain, Web4, and open-source software** that pushes boundaries and creates real-world impact.
@@ -22,7 +32,7 @@ To empower developers and organizations with cutting-edge technology, open-sourc
 
 | Project | Description | Link |
 |---------|-------------|------|
-| [QUBUHUB](https://github.com/QUBUHUB/main) | Core hub for AI & blockchain innovation | [Repo](https://github.com/QUBUHUB/main) |
+|[QUBUHUB](https://github.com/QUBUHUB/main) | Core hub for AI & blockchain innovation | [Repo](https://github.com/QUBUHUB/main) |
 | [Fadaka](https://github.com/Web4application/fadaka) | Cryptocurrency and blockchain tools | [Repo](https://github.com/Web4application/fadaka) |
 | [Fadaka Blockchain](https://github.com/Web4application/fadaka-blockchain) | Full blockchain implementation with ERC-20 support | [Repo](https://github.com/Web4application/fadaka-blockchain) |
 | [Web4AI Project Assistant](https://github.com/Web4application/Web4AI_Project_Assistant) | AI-powered web and automation solutions | [Repo](https://github.com/Web4application/Web4AI_Project_Assistant) |
@@ -32,7 +42,6 @@ To empower developers and organizations with cutting-edge technology, open-sourc
 | [Fadaka Blockchain CLI](https://github.com/Web4application/fadaka-blockchain-cli) | Command-line interface for blockchain management | [Repo](https://github.com/Web4application/fadaka-blockchain-cli) |
 | [ChatGPT5 Mini](https://github.com/Web4application/ChatGPT5-mini) | Innovative AI project, your personal assistant | [Repo](https://github.com/Web4application/ChatGPT5-mini) |
 | [KubuRenovate](https://github.com/Web4application/KubuRenovate) | Automated dependency management tool | [Repo](https://github.com/Web4application/KubuRenovate) |
-
 ---
 
 ## 📈 Stats & Badges
@@ -89,7 +98,7 @@ Empower developers and organizations with AI-driven solutions, decentralized app
 
 | Project | Description | Demo / Repo |
 |---------|-------------|-------------|
-| <img src="https://raw.githubusercontent.com/Web4application/fadaka/main/logo.png" width="50"> [Fadaka](https://github.com/Web4application/fadaka) | Cryptocurrency & blockchain tools | [Repo](https://github.com/Web4application/fadaka) |
+| <img src="https://raw.githubusercontent.com/Web4application/fadaka/main/logo.png" width="50">[Fadaka](https://github.com/Web4application/fadaka.png) | Cryptocurrency & blockchain tools | [Repo](https://github.com/Web4application/fadaka.git) |
 | <img src="https://raw.githubusercontent.com/Web4application/fadaka-blockchain/main/logo.png" width="50"> [Fadaka Blockchain](https://github.com/Web4application/fadaka-blockchain) | Full ERC-20 blockchain | [Repo](https://github.com/Web4application/fadaka-blockchain) |
 | <img src="https://raw.githubusercontent.com/QUBUHUB/main/logo.png" width="50"> [QUBUHUB](https://github.com/QUBUHUB/main) | Core hub for AI & blockchain innovation | [Repo](https://github.com/QUBUHUB/main) |
 | <img src="https://raw.githubusercontent.com/Web4application/Web4AI_Project_Assistant/main/logo.png" width="50"> [Web4AI Assistant](https://github.com/Web4application/Web4AI_Project_Assistant) | AI-powered automation & analysis | [Repo](https://github.com/Web4application/Web4AI_Project_Assistant) |
@@ -129,3 +138,6 @@ Fork projects, submit pull requests, or just explore our code — join the journ
 ---
 
 *Built with passion, vision, and cutting-edge technology by Seriki Yakub (Kubu Lee).*
+
+--- 
+
