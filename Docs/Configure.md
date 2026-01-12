@@ -1,7 +1,10 @@
-# Configure Sequencing (/en/docs/syndicate-stack/guides/config-sequencing)
+---
+name: Configure Sequencing (/en/docs/syndicate-stack/guides/config-sequencing)
+---
 
 ## How Onchain Sequencing Works
 
+---
 1. **Users submit transactions** to the appchain's mempool
 2. **The execution engine** processes transactions by validating and coordination transactions
 3. **Sequencing modules on the sequencing chain** control permissions, ordering, auctions, and atomic execution
@@ -85,3 +88,4 @@ permissions.addCheck(
 3. **Configure Your Chain**: Deploy and initialize your chain with the selected modules.
 
 4. **Monitor and Upgrade**: Track performance metrics and upgrade modules as needed using our modular architecture to ensure optimal chain operation.
+---
