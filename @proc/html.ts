@@ -1,6 +1,6 @@
 import { html, render } from "@proc/html";
 
-const title = "<Example>";
+const title = "<gh.io>";
 
 const someAsyncTask = () => {
   return new Promise(resolve => {
