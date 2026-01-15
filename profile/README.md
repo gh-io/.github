@@ -2,12 +2,12 @@
 tittle: gh.io
 name: app.com
 name: unpkg.com
-name: sr.ht
+name: web4.io
 contents: <script src="https://unpkg.com/app.com"></script>
 Description: 
 --- 
 
-
+[![Deploy to Fastly](https://deploy.edgecompute.app/button)](https://deploy.edgecompute.app/deploy)
 
 
 
